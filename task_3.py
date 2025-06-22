@@ -55,4 +55,4 @@ if __name__ == "__main__":
     for vertex, distance in shortest_paths.items():
         print(f"{start} -> {vertex}: {distance}")
 
-print(dijkstra(G, 'A'))
+    print(dijkstra(G, 'A'))

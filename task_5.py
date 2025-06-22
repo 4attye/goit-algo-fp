@@ -1,5 +1,4 @@
 from collections import deque
-import time
 from task_4 import draw_tree, heap_to_tree, max_heap
 
 
@@ -54,7 +53,7 @@ def bfs(root):
 
 
 if __name__ == "__main__":
-    numbers = [10, 2, 6, 5, 9, 3, 8]
+    numbers = [10, 2, 6, 5, 9, 3, 8, 1, 4, 2]
     to_tree = heap_to_tree(numbers)
 
     # DFS

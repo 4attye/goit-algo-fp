@@ -124,6 +124,7 @@ class LinkedList:
         for value in sorted_arr:
             self.insert(value)
 
+
 if __name__ == "__main__":
 
     # Створення двох зв'язних списків

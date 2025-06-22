@@ -50,9 +50,11 @@ def draw_fractal_tree(level, size=100):
 
     window.mainloop()
 
+
+if __name__ == "__main__":
 # Отримання рівня рекурсії від користувача
-try:
-    user_level = int(input("Введіть рівень рекурсії (наприклад: 8): "))
-    draw_fractal_tree(user_level)
-except ValueError:
-    print("Будь ласка, введіть число")
+    try:
+        user_level = int(input("Введіть рівень рекурсії (наприклад: 8): "))
+        draw_fractal_tree(user_level)
+    except ValueError:
+        print("Будь ласка, введіть число")

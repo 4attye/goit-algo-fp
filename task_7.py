@@ -37,7 +37,7 @@ def visualization_probs(monte_carlo_probs, analytical_probs):
 
 
 if __name__ == "__main__":
-    num_rolls = 10000
+    num_rolls = 1_000_000
 
     monte_carlo_probs = monte_carlo(num_rolls)
     analytical_probs = {

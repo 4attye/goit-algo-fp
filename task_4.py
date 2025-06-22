@@ -55,7 +55,7 @@ def add_edges(graph, node, pos, x=0, y=0, layer=1):
             r = add_edges(graph, node.right, pos, x=r, y=y - 1, layer=layer + 1)
     return graph
 
-def draw_tree(tree_root):
+def draw_tree(tree_root, title=""):
     tree = nx.DiGraph()
     pos = {tree_root.id: (0, 0)}
     tree = add_edges(tree, tree_root, pos)
@@ -64,7 +64,8 @@ def draw_tree(tree_root):
     labels = {node[0]: node[1]['label'] for node in tree.nodes(data=True)} # Використовуйте значення вузла для міток
 
     plt.figure(figsize=(8, 5))
-    nx.draw(tree, pos=pos, labels=labels, arrows=False, node_size=2500, node_color=colors)
+    plt.title(title)
+    nx.draw(tree, pos=pos, labels=labels, arrows=False, node_size=1500, node_color=colors)
     plt.show()
 
 def heap_to_tree(heap_list):
@@ -98,4 +99,4 @@ if __name__ == "__main__":
     to_tree = heap_to_tree(heap)
 
     # Візуалізація
-    draw_tree(to_tree)
+    draw_tree(to_tree, "Макс-купа як дерево")
